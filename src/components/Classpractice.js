@@ -3,13 +3,19 @@ import { Count } from './SampleData';
 export class ClassComponent extends React.Component {
   constructor() {
     super();
-    let Suresh = 'deva';
     this.state = {
-      Text: Suresh,
+      Text: 'Deva',
+      Status: true,
     };
   }
   changename() {
-    this.setState({ Text: 'Roy' });
+    if (this.state.Status === false) {
+      this.setState({ Status: true });
+      this.setState({ Text: 'Deva' });
+    } else {
+      this.setState({ Status: false });
+      this.setState({ Text: 'Roy' });
+    }
   }
   namechange() {
     this.setState({ Text: 'deva' });
