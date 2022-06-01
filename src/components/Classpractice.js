@@ -1,5 +1,6 @@
 import React from 'react';
 import { Count } from './SampleData';
+import { Link } from 'react-router-dom';
 export class ClassComponent extends React.Component {
   constructor() {
     super();
@@ -23,7 +24,9 @@ export class ClassComponent extends React.Component {
   render() {
     return (
       <div style={{ margin: '50px' }}>
-        test data
+        <button>
+          <Link to="Home">Home</Link>
+        </button>
         <Count
           roy="55"
           text={this.state.Text}
